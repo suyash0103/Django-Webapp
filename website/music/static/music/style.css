@@ -1,0 +1,11 @@
+body{
+        background-image: url("http://globalmedicalco.com/photos/globalmedicalco/17/81651.jpg");
+    }
+
+.navbar{
+        border-radius : 0;
+    }
+
+.navbar-brand{
+        font-family : 'Satisfy', cursive;
+    }
