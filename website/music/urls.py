@@ -21,7 +21,7 @@ urlpatterns = [
     # music/album/add/
     url(r'album/add/$', views.AlbumCreate.as_view(), name='album-add'),
 
-    # music/album/2/
+    # music/album/2/  -> opens filled form for a particular album
     url(r'album/(?P<pk>[0-9]+)/$', views.AlbumUpdate.as_view(), name='album-update'),
 
     # music/album/2/delete/
