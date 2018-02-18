@@ -45,6 +45,10 @@ from django.views import generic
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.urls import reverse_lazy
 from .models import Album
+from django.shortcuts import render, redirect
+from django.contrib.auth import authenticate, login
+from django.views.generic import View
+from .forms import UserForm
 
 class IndexView(generic.ListView):
     template_name = 'music/index.html'
@@ -68,3 +72,14 @@ class AlbumUpdate(UpdateView):
 class AlbumDelte(DeleteView):
     model = Album
     success_url = reverse_lazy('music:index')
+
+class UserFormView(View):
+    form_class = UserForm
+    template_name = 'music/registration_form.html'
+
+    # display blank form
+    def get(self, request):
+        pass
+
+    def post(self, request):
+        pass
